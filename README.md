@@ -21,11 +21,11 @@ This is a simple iOS version of my Daily Routine App idea, built while learning 
 ## How to run it in Xcode
 Requires Xcode 15 or later and iOS 17 or later.
 
-1. Open Xcode and choose **File > New > Project > iOS > App**.
-2. Name it `DailyRoutine`, set Interface to **SwiftUI** and Language to **Swift**.
-3. Delete the `ContentView.swift` and `DailyRoutineApp.swift` files Xcode created.
-4. Drag the four files from the `DailyRoutine` folder of this repo into the project (tick "Copy items if needed").
-5. Pick an iPhone simulator and press **Run** (Cmd+R).
+1. Clone this repository.
+2. Open `DailyRoutine.xcodeproj`.
+3. Pick an iPhone simulator and press **Run** (Cmd+R).
+
+The project is already connected to this GitHub repository, so commits can be pushed from Xcode or from the command line.
 
 ## Screenshots
 Screenshots will be added once the app has been run on a simulator.

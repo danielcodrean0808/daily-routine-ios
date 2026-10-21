@@ -1,0 +1,13 @@
+import SwiftUI
+
+@main
+struct DailyRoutineApp: App {
+    @StateObject private var store = RoutineStore()
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(store)
+        }
+    }
+}

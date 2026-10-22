@@ -18,6 +18,10 @@ struct ContentView: View {
                 }
 
                 Section("Today: \(store.doneCount) of \(store.tasks.count) done") {
+                    if store.tasks.isEmpty {
+                        Text("No tasks yet. Add one above to start your routine.")
+                            .foregroundStyle(.secondary)
+                    }
                     ForEach(store.tasks) { task in
                         Button {
                             store.toggle(task)

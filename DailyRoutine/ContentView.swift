@@ -13,7 +13,7 @@ struct ContentView: View {
                         TextField("New task", text: $newTitle)
                             .onSubmit(addTask)
                         Button("Add", action: addTask)
-                            .disabled(newTitle.trimmingCharacters(in: .whitespaces).isEmpty)
+                            .disabled(newTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                     }
                 }
 

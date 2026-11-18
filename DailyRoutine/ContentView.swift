@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 
 struct ContentView: View {
@@ -47,6 +48,15 @@ struct ContentView: View {
                 if phase == .active {
                     store.resetIfNewDay()
                 }
+            }
+            // scenePhase only changes when the app is opened or closed, so also
+            // clear the ticks at midnight if the app is left open on screen.
+            .onReceive(
+                NotificationCenter.default
+                    .publisher(for: .NSCalendarDayChanged)
+                    .receive(on: DispatchQueue.main)
+            ) { _ in
+                store.resetIfNewDay()
             }
         }
     }

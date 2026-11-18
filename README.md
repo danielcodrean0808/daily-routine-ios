@@ -8,7 +8,7 @@ This is a simple iOS version of my Daily Routine App idea, built while learning 
 - Add, tick off, reorder and delete routine tasks
 - Progress count for today (for example "3 of 5 done")
 - Tasks are saved on the device with UserDefaults (Codable JSON)
-- Ticks reset at the start of each new day
+- Ticks reset at the start of each new day, even if the app is left open over midnight
 
 ## Files
 | File | What it does |

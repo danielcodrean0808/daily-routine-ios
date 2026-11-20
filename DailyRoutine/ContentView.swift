@@ -35,6 +35,11 @@ struct ContentView: View {
                                     .foregroundStyle(task.isDone ? .secondary : .primary)
                             }
                         }
+                        // Without these, VoiceOver reads the icon name ("circle")
+                        // and never says whether the task is ticked.
+                        .accessibilityLabel(task.title)
+                        .accessibilityValue(task.isDone ? "Done" : "Not done")
+                        .accessibilityHint("Double tap to tick or untick")
                     }
                     .onDelete(perform: store.delete)
                     .onMove(perform: store.move)
